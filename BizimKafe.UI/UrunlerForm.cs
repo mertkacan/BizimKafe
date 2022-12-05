@@ -52,7 +52,7 @@ namespace BizimKafe.UI
                 urun.UrunAd = ad;
                 UrunleriListele();
                 btnEkle.Text = "EKLE";
-                btnİptal.Visible = false;
+                btnIptal.Visible = false;
                 txtUrunAd.Clear();
                 nudBirimFiyat.Value = 0;
             }
@@ -82,7 +82,7 @@ namespace BizimKafe.UI
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
             btnEkle.Text = "KAYDET";
-            btnİptal.Visible = true;
+            btnIptal.Visible = true;
             DataGridViewRow satir = dgvUrunler.SelectedRows[0];
             Urun urun = (Urun)satir.DataBoundItem;
             txtUrunAd.Text = urun.UrunAd;
@@ -92,7 +92,7 @@ namespace BizimKafe.UI
         private void btnİptal_Click(object sender, EventArgs e)
         {
             btnEkle.Text = "EKLE";
-            btnİptal.Visible = false;
+            btnIptal.Visible = false;
             txtUrunAd.Clear();
             nudBirimFiyat.Value = 0;
         }

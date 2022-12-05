@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.nudBirimFiyat = new System.Windows.Forms.NumericUpDown();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -36,9 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDüzenle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            this.btnİptal = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnIptal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBirimFiyat)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,24 @@
             this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUrunler.Size = new System.Drawing.Size(605, 406);
             this.dgvUrunler.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "UrunAd";
+            this.Column1.HeaderText = "Ürün Adı";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "BirimFiyat";
+            this.Column2.HeaderText = "Birim Fiyatı";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
             // 
             // txtUrunAd
             // 
@@ -131,41 +149,22 @@
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // btnİptal
+            // btnIptal
             // 
-            this.btnİptal.Location = new System.Drawing.Point(384, 33);
-            this.btnİptal.Name = "btnİptal";
-            this.btnİptal.Size = new System.Drawing.Size(94, 29);
-            this.btnİptal.TabIndex = 8;
-            this.btnİptal.Text = "İPTAL";
-            this.btnİptal.UseVisualStyleBackColor = true;
-            this.btnİptal.Visible = false;
-            this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "UrunAd";
-            this.Column1.HeaderText = "Ürün Adı";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "BirimFiyat";
-            this.Column2.HeaderText = "Birim Fiyatı";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.btnIptal.Location = new System.Drawing.Point(384, 33);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(94, 29);
+            this.btnIptal.TabIndex = 8;
+            this.btnIptal.Text = "İPTAL";
+            this.btnIptal.UseVisualStyleBackColor = true;
+            this.btnIptal.Visible = false;
             // 
             // UrunlerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 588);
-            this.Controls.Add(this.btnİptal);
+            this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnDüzenle);
             this.Controls.Add(this.label2);
@@ -195,7 +194,7 @@
         private Label label2;
         private Button btnDüzenle;
         private Button btnSil;
-        private Button btnİptal;
+        private Button btnIptal;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
     }
